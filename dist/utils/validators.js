@@ -10,7 +10,7 @@ const validate = (validations) => {
         if (errors.isEmpty()) {
             return next();
         }
-        res.status(422).json({ errors: errors.array() });
+        return res.status(422).json({ errors: errors.array() });
     };
 };
 const signupValidator = [
